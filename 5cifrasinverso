@@ -1,0 +1,43 @@
+package javaapplication;
+// introducir un número de 5 cifras y devolver el número en orden inverso
+
+import java.util.Scanner;
+
+public class NewClass {
+
+    public static void main(String[] args) {
+
+        //VARIABLES
+        int n, ni, r;
+
+        //ENTRADA
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Numero: ");
+        n = teclado.nextInt();
+
+        //PROCESO 
+        r = n % 10;
+        n = n / 10;
+        ni = r * 10;
+
+        r = n % 10;
+        n = n / 10;
+        ni = (ni + r) * 10;
+
+        r = n % 10;
+        n = n / 10;
+        ni = (ni + r) * 10;
+
+        r = n % 10;
+        n = n / 10;
+        ni = (ni + r) * 10;
+
+        ni = ni + n;
+
+        // SALIDA 
+        System.out.println("");
+        System.out.println("INVERSO: " + ni);
+
+    }
+
+}
